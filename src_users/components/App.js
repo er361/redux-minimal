@@ -25,19 +25,7 @@ export class App extends React.Component {
     // render
     return (
       <div className="container">
-        <div>
-          <Menu/>
-        </div>
-        <div>
-          {children}
-        </div>
-        <div className="footer">
-          <img src="/media/logo.svg"/>
-          <span>
-            Simple users app built with {' '}
-            <a href="http://redux-minimal.js.org/" target="_blank">redux-minimal</a>
-          </span>
-        </div>
+        from app
       </div>
     );
   }

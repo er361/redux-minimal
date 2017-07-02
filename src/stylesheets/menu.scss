@@ -1,0 +1,19 @@
+@import './variables.scss';
+.myNav{
+    list-style-type: none;
+
+    li{
+        float: left;
+        a{
+            display: block;
+            padding: 8px;
+            text-decoration-line: none;
+            color: $linkColor;
+        }
+    }
+
+    li.active{
+        border-bottom: 2px solid;
+        border-bottom-color: $secondColor;
+    }
+}
