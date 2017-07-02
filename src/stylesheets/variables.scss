@@ -1,3 +1,12 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic,cyrillic-ext');
 //menu
 $secondColor: #00C853;
 $linkColor: #212121;
+$linkHoverColor : #E0E0E0;
+
+//all site
+body{
+    font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif;
+}

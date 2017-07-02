@@ -1,19 +1,40 @@
 @import './variables.scss';
+$menuButtonRange: 12px;
 .myNav{
+    text-transform: uppercase;
+    // font-weight: 400;
     list-style-type: none;
 
-    li{
-        float: left;
-        a{
-            display: block;
-            padding: 8px;
-            text-decoration-line: none;
-            color: $linkColor;
+        li{
+            float: left;
+            a{
+                display: block;
+                padding: 0 $menuButtonRange 10px $menuButtonRange;
+                text-decoration-line: none;
+                color: $linkColor;
+            }
         }
-    }
 
-    li.active{
-        border-bottom: 2px solid;
-        border-bottom-color: $secondColor;
-    }
+        li::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $secondColor;
+            transition: width .3s;
+        }
+
+        li:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+
+        li.active{
+
+            a{
+                color: $secondColor;
+                transition: color .3s;
+            }
+            
+        }
 }
