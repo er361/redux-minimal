@@ -1,17 +1,53 @@
-
+@import './variables';
 .logo{
-    width: 228px;
-    height: 64px;
-    background-image: url('../../public/media/logoGreen.png');
+    width: 170px;
+    height: 48px;
+    background-size: cover;
 }
 
 #lp{
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('../../public/media/bgSite.jpg');
+    background-image: url('../../public/media/light-grey-bg.jpg');
 }
 
-.test{
-    height: 900px;
+.custom-awesome{
+    color: $secondColor;
+}
+
+.middleContent{
+    .header{
+        text-transform: uppercase
+    }
+    .content{
+        list-style-type: none;
+        font-size: 2.2em;
+
+        li{
+        font-weight: 300;
+        }
+        
+        li::before{
+            content: ' - '
+        }
+    }
+    
+}
+.bottomContent{
+    .header{
+        text-align: center;
+    }
+    .content{
+        padding: 8px;
+    }
+}
+
+.clearfix{
+    height: 30px;
+}
+
+.btn-feedback{
+    background-color: $secondColor;
+    color: white;
 }
 

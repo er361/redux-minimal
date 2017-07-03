@@ -1,6 +1,8 @@
 @import './variables.scss';
 $menuButtonRange: 12px;
 .myNav{
+    margin-top: 20px;
+    padding: 0;
     text-transform: uppercase;
     // font-weight: 400;
     list-style-type: none;

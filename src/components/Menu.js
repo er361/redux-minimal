@@ -23,7 +23,6 @@ class Menu extends Component {
   render () {
     return (
          <Nav 
-            bsStyle="pills"
             bsClass="myNav" 
             activeKey={this.state.activeKey} 
             onSelect={this.handleSelect.bind(this)}>

@@ -1,5 +1,10 @@
 import React from "react";
 import "../stylesheets/main.scss";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {greenA700} from 'material-ui/styles/colors';
+injectTapEventPlugin();
 
 // app component
 export default class App extends React.Component {
@@ -26,13 +31,20 @@ updateWindowDimensions() {
         let style = {
           bgImage: {
             width: this.state.width,
-            height: '900px'
+            height: this.state.height
           }
         }
+        const muiTheme = getMuiTheme({
+              palette: {
+                primary1Color: greenA700,
+              }
+            });
         
     return (
       <div style={style.bgImage} id="lp" className="container-fluid">
-        {this.props.children}
+        <MuiThemeProvider muiTheme={muiTheme}>
+           {this.props.children}
+        </MuiThemeProvider>
       </div>
     );
   }
