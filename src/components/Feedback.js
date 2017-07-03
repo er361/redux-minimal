@@ -2,15 +2,10 @@ import React, {Component} from 'react'
 import {Form, FormControl, Button} from 'react-bootstrap'
 import {TextField, Paper, RaisedButton} from 'material-ui'
 import {Grid, Col, Row} from 'react-bootstrap';
-import NumberFormat from 'react-number-format'
 
-const MyInput = (props) => {
-  return (
-    <div>
-      <TextField id="phone" floatingLabelText='Телефон'/>
-    </div>
-  )
-}
+import PhoneInput from './PhoneInput'
+
+
 
 class Feedback extends Component {
   render() {
@@ -34,7 +29,7 @@ class Feedback extends Component {
                   <TextField id="name" floatingLabelText='Имя'/>
                 </Col>
                 <Col xs={5}>
-                  <NumberFormat customInput={MyInput} format="#### #### #### ####"/>
+                     <PhoneInput/>
                 </Col>
               </Row>
               <Row>
